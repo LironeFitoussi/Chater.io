@@ -1,36 +1,41 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
+// Routes imports
+import Root from "./pages/Root.tsx";
+import Messages from "./pages/Messages/Messages.tsx";
+import Groups from "./pages/Groups/Groups.tsx";
+import Archives from "./pages/Archives/Archives.tsx";
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <p className="text-3xl font-bold underline bg-slate-600">Hello world!</p>
-    </>
-  );
+// TODO: Add imports for the new pages
+import Calls from "./pages/Calls/Calls.tsx"; 
+import Times from "./pages/Times/Times.tsx";
+  
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {path: "messages",
+         element: <Messages />,
+          children: [ {
+            path: "archives",
+            element: <Archives />
+          }
+        ] 
+      },
+      // Groups
+      {
+        path: "groups",
+        element: <Groups />,
+      },
+
+    ],
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;
