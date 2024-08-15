@@ -57,7 +57,7 @@ const Aside: React.FC<AsideProps> = () => {
             <img src={appLogo} alt="" />
           </Link>
           <Link
-            to="/messages"
+            to="/chats"
             className={`${styles["tab-icon"]} ${
               pathname === "/messages" ? "active-tab" : ""
             }`}
