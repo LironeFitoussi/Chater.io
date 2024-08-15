@@ -1,0 +1,122 @@
+[
+  {
+    "name": "John Doe",
+    "userId": "1",
+    "isUserOnline": true,
+    "isArchived": false,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440000",
+    "lastMessage": {
+      "content": "Hello",
+      "time": "12:00",
+      "from": "you"
+    }
+  },
+  {
+    "name": "Jane Smith",
+    "userId": "2",
+    "isUserOnline": false,
+    "isArchived": true,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440001",
+    "lastMessage": {
+      "content": "See you tomorrow!",
+      "time": "11:45",
+      "from": "Jane"
+    }
+  },
+  {
+    "name": "Michael Johnson",
+    "userId": "3",
+    "isUserOnline": true,
+    "isArchived": false,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440002",
+    "lastMessage": {
+      "content": "Can we reschedule?",
+      "time": "09:30",
+      "from": "you"
+    }
+  },
+  {
+    "name": "Emily Davis",
+    "userId": "4",
+    "isUserOnline": true,
+    "isArchived": false,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440003",
+    "lastMessage": {
+      "content": "Sure, no problem.",
+      "time": "14:10",
+      "from": "Emily"
+    }
+  },
+  {
+    "name": "Daniel Brown",
+    "userId": "5",
+    "isUserOnline": false,
+    "isArchived": false,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440004",
+    "lastMessage": {
+      "content": "I'll be there in 5 minutes.",
+      "time": "13:55",
+      "from": "you"
+    }
+  },
+  {
+    "name": "Sophia Wilson",
+    "userId": "6",
+    "isUserOnline": true,
+    "isArchived": false,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440005",
+    "lastMessage": {
+      "content": "Thanks for your help!",
+      "time": "15:20",
+      "from": "Sophia"
+    }
+  },
+  {
+    "name": "James Martinez",
+    "userId": "7",
+    "isUserOnline": false,
+    "isArchived": false,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440006",
+    "lastMessage": {
+      "content": "I'll get back to you later.",
+      "time": "16:45",
+      "from": "you"
+    }
+  },
+  {
+    "name": "Olivia Garcia",
+    "userId": "8",
+    "isUserOnline": true,
+    "isArchived": true,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440007",
+    "lastMessage": {
+      "content": "Call me when you're free.",
+      "time": "17:30",
+      "from": "Olivia"
+    }
+  },
+  {
+    "name": "William Hernandez",
+    "userId": "9",
+    "isUserOnline": true,
+    "isArchived": false,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440008",
+    "lastMessage": {
+      "content": "Let's meet at 7 PM.",
+      "time": "18:10",
+      "from": "you"
+    }
+  },
+  {
+    "name": "Ava Lee",
+    "userId": "10",
+    "isUserOnline": false,
+    "isArchived": false,
+    "conversationId": "550e8400-e29b-41d4-a716-446655440009",
+    "lastMessage": {
+      "content": "Okay, talk to you soon!",
+      "time": "19:00",
+      "from": "Ava"
+    }
+  }
+]

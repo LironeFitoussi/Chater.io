@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ROOT Color Variables */
+:root {
+  --primary-color: #5b96f7;
+  --secondary-color: #70a3f5;
+  --text-color: #213547;
+  --background-color: #ffffff;
+  --hover-color: #747bff;
+  --button-background-color: #f9f9f9;
+  --text-placeholder-color: #709ce6;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -12,7 +23,7 @@ body {
 
 aside {
   padding: 1em;
-  background-color: #F0F4FA;
+  background-color: #f0f4fa;
   /* border-radius: 8px; */
 }
 
@@ -22,12 +33,21 @@ a {
 }
 
 .active-tab {
-  color: #F0F4FA !important;
-  background-color: #5B96F7;
+  color: #f0f4fa !important;
+  background-color: #5b96f7;
 }
 
 .active-tab:hover {
   background-color: #70a3f5;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+input {
+  background-color: transparent;
 }
 
 @media (prefers-color-scheme: light) {

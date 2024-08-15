@@ -1,8 +1,8 @@
 import React from "react";
-import appLogo from "../assets/app-logo.jpg";
+import appLogo from "../../../assets/app-logo.jpg";
 import styles from "./Aside.module.css";
 // react-router-dom
-import { Link, useLocation  } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // Icons
 import TextsmsIcon from "@mui/icons-material/Textsms";
@@ -10,14 +10,15 @@ import GroupIcon from "@mui/icons-material/Group";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import SettingsIcon from "@mui/icons-material/Settings";
 
-import UserPic from "./UserPic";
+import UserPic from "../../Atoms/UserPic/UserPic.tsx";
 import { styled } from "@mui/material/styles";
 import Switch, { SwitchProps } from "@mui/material/Switch";
+import Divider from "../../Atoms/Divider.tsx";
 
 interface AsideProps {
   // Add any props you need here
 }
-const styleCol = "flex flex-col items-center gap-4"
+const styleCol = "flex flex-col items-center gap-4";
 const Android12Switch = styled(Switch)(({ theme }) => ({
   padding: 8,
   "& .MuiSwitch-track": {
@@ -39,31 +40,53 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const Aside: React.FC<AsideProps> = (
-  {
-    /* Destructure props here */
-  }
-) => {
+const Aside: React.FC<AsideProps> = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
-  
+  // console.log(pathname);
+
   return (
     <aside>
       <div className="flex flex-col justify-between h-full box-border">
         <div className={styleCol}>
-          <Link to="/" className={`w-10 rounded-lg ${pathname === "/" ? "active-tab" : ""}`}>
+          <Link
+            to="/"
+            className={`w-10 rounded-lg ${
+              pathname === "/" ? "active-tab" : ""
+            }`}
+          >
             <img src={appLogo} alt="" />
           </Link>
-          <Link to="/messages" className={`${styles["tab-icon"]} ${pathname === "/messages" ? "active-tab" : ""}`}>
+          <Link
+            to="/messages"
+            className={`${styles["tab-icon"]} ${
+              pathname === "/messages" ? "active-tab" : ""
+            }`}
+          >
             <TextsmsIcon />
           </Link>
-          <Link to="/groups" className={`${styles["tab-icon"]} ${pathname === "/groups" ? "active-tab" : ""}`}>
+          <Link
+            to="/groups"
+            className={`${styles["tab-icon"]} ${
+              pathname === "/groups" ? "active-tab" : ""
+            }`}
+          >
             <GroupIcon />
           </Link>
-          <Link to="/phone" className={`${styles["tab-icon"]} ${pathname === "/phone" ? "active-tab" : ""}`}>
+          <Link
+            to="/phone"
+            className={`${styles["tab-icon"]} ${
+              pathname === "/phone" ? "active-tab" : ""
+            }`}
+          >
             <LocalPhoneIcon />
           </Link>
-          <Link to="/settings" className={`${styles["tab-icon"]} ${pathname === "/settings" ? "active-tab" : ""}`}>
+          <Divider />
+          <Link
+            to="/settings"
+            className={`${styles["tab-icon"]} ${
+              pathname === "/settings" ? "active-tab" : ""
+            }`}
+          >
             <SettingsIcon />
           </Link>
         </div>

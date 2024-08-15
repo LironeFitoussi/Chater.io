@@ -1,22 +1,21 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 // Components imports
-import Aside from '../components/Aside';
+import Aside from "../components/Main Components/Aside/Aside.tsx";
 interface Props {
-    // Define your component's props here
+  // Define your component's props here
 }
 
 const Root: React.FC<Props> = (props) => {
-    // Implement your component logic here
+  // Implement your component logic here
 
-    return (
-        <>
-            <Aside />
-            <h1>MyComponent</h1>
-            <Outlet />
-        </>
-    );
+  return (
+    <>
+      <Aside />
+      <Outlet />
+    </>
+  );
 };
 
 export default Root;
